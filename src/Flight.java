@@ -8,6 +8,9 @@ public class Flight {
     private Airport mDestination;
     private Aircraft mAircraft;
 
+    public Flight() {
+    }
+
     public Flight(String id, Date departDate, Date arrivalDate, Airport origin, Airport destination, Aircraft aircraft) {
         this.mID = id;
         this.mDepartDate = departDate;

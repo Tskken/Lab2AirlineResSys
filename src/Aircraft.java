@@ -6,6 +6,9 @@ public class Aircraft {
     private int mSeatCount;
     private Map<String, ArrayList<Seat>> mSeatList;
 
+    public Aircraft() {
+    }
+
     public Aircraft(Company mCompany, int mSeatCount, Map<String, ArrayList<Seat>> mSeatList) {
         this.mCompany = mCompany;
         this.mSeatCount = mSeatCount;

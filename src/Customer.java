@@ -33,4 +33,16 @@ public class Customer {
     public void setmItinerarys(ArrayList<Itinerary> mItinerarys) {
         this.mItinerarys = mItinerarys;
     }
+
+    public void printItineraries() {
+        mItinerarys.forEach(i -> {
+            System.out.println("Name    : " + mFName);
+            System.out.println("Lastname: " + mLName);
+            System.out.println("From    : " + i.getmFlight().getmOrigin().getmLocation());
+            System.out.println("To      : " + i.getmFlight().getmDestination().getmLocation());
+            System.out.println("Seat #  : " + i.getmSeat().getmLocation());
+            System.out.println("Carrier : " + i.getmFlight().getmAircraft().getmCompany());
+        });
+        System.out.println("----End of Itinerary----");
+    }
 }
