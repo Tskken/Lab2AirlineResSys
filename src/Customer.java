@@ -35,15 +35,14 @@ public class Customer {
     }
 
     public void printItineraries() {
-        for (int i = 0; i < mItinerarys.size(); i++) {
+        mItinerarys.forEach(i -> {
             System.out.println("Name    : " + mFName);
             System.out.println("Lastname: " + mLName);
-            System.out.println("From    : " + mItinerarys.get(i).getmFlight().getmOrigin().getmLocation());
-            System.out.println("To      : " + mItinerarys.get(i).getmFlight().getmDestination().getmLocation());
-            System.out.println("Seat #  : " + mItinerarys.get(i).getmSeat().getmLocation());
-            System.out.println("Carrier : " + mItinerarys.get(i).getmFlight().getmAircraft().getmCompany().getmName());
-            System.out.println("----------------------");
-        }
+            System.out.println("From    : " + i.getmFlight().getmOrigin().getmLocation());
+            System.out.println("To      : " + i.getmFlight().getmDestination().getmLocation());
+            System.out.println("Seat #  : " + i.getmSeat().getmLocation());
+            System.out.println("Carrier : " + i.getmFlight().getmAircraft().getmCompany());
+        });
         System.out.println("----End of Itinerary----");
     }
 }
